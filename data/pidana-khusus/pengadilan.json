@@ -1,0 +1,1910 @@
+[
+    {
+        "pengadilan": "MAHKAMAH AGUNG",
+        "total": 23207
+    },
+    {
+        "pengadilan": "PN MEDAN",
+        "total": 8332
+    },
+    {
+        "pengadilan": "PN SURABAYA",
+        "total": 7688
+    },
+    {
+        "pengadilan": "PT SURABAYA",
+        "total": 6638
+    },
+    {
+        "pengadilan": "PN JAKARTA BARAT",
+        "total": 5615
+    },
+    {
+        "pengadilan": "PN PALEMBANG",
+        "total": 5429
+    },
+    {
+        "pengadilan": "PT MEDAN",
+        "total": 5345
+    },
+    {
+        "pengadilan": "PN DENPASAR",
+        "total": 4696
+    },
+    {
+        "pengadilan": "PN LUBUK PAKAM",
+        "total": 4689
+    },
+    {
+        "pengadilan": "PN STABAT",
+        "total": 4565
+    },
+    {
+        "pengadilan": "PN JAKARTA PUSAT",
+        "total": 4527
+    },
+    {
+        "pengadilan": "PN BANDUNG",
+        "total": 4318
+    },
+    {
+        "pengadilan": "PN MAKASSAR",
+        "total": 4309
+    },
+    {
+        "pengadilan": "PN JAKARTA UTARA",
+        "total": 4012
+    },
+    {
+        "pengadilan": "PN JAKARTA TIMUR",
+        "total": 3842
+    },
+    {
+        "pengadilan": "PN KISARAN",
+        "total": 3722
+    },
+    {
+        "pengadilan": "PN RANTAU PRAPAT",
+        "total": 3669
+    },
+    {
+        "pengadilan": "PN BENGKALIS",
+        "total": 3534
+    },
+    {
+        "pengadilan": "PN SIDOARJO",
+        "total": 3528
+    },
+    {
+        "pengadilan": "PN TANGERANG",
+        "total": 3376
+    },
+    {
+        "pengadilan": "PN PEKANBARU",
+        "total": 3314
+    },
+    {
+        "pengadilan": "PN PADANG",
+        "total": 3281
+    },
+    {
+        "pengadilan": "PT SEMARANG",
+        "total": 3192
+    },
+    {
+        "pengadilan": "PT MAKASSAR",
+        "total": 3144
+    },
+    {
+        "pengadilan": "PN BANJARMASIN",
+        "total": 2976
+    },
+    {
+        "pengadilan": "PN TANJUNG KARANG",
+        "total": 2925
+    },
+    {
+        "pengadilan": "PN BEKASI",
+        "total": 2920
+    },
+    {
+        "pengadilan": "PN JAMBI",
+        "total": 2710
+    },
+    {
+        "pengadilan": "PN BATURAJA",
+        "total": 2679
+    },
+    {
+        "pengadilan": "PT PEKANBARU",
+        "total": 2676
+    },
+    {
+        "pengadilan": "PN SUNGAI LIAT",
+        "total": 2610
+    },
+    {
+        "pengadilan": "PN MALANG",
+        "total": 2590
+    },
+    {
+        "pengadilan": "PN SAMARINDA",
+        "total": 2578
+    },
+    {
+        "pengadilan": "PN SEKAYU",
+        "total": 2426
+    },
+    {
+        "pengadilan": "PN TANJUNG BALAI ASAHAN",
+        "total": 2350
+    },
+    {
+        "pengadilan": "PN JAKARTA SELATAN",
+        "total": 2267
+    },
+    {
+        "pengadilan": "PN KAB KEDIRI",
+        "total": 2246
+    },
+    {
+        "pengadilan": "PT JAKARTA",
+        "total": 2220
+    },
+    {
+        "pengadilan": "PN LUBUK LINGAU",
+        "total": 2196
+    },
+    {
+        "pengadilan": "PN PALANGKARAYA",
+        "total": 2181
+    },
+    {
+        "pengadilan": "PN TENGGARONG",
+        "total": 2161
+    },
+    {
+        "pengadilan": "PN BALE BANDUNG",
+        "total": 2150
+    },
+    {
+        "pengadilan": "PN SEMARANG",
+        "total": 2088
+    },
+    {
+        "pengadilan": "PN KAYUAGUNG",
+        "total": 2085
+    },
+    {
+        "pengadilan": "PN BINJAI",
+        "total": 2016
+    },
+    {
+        "pengadilan": "PN BANDA ACEH",
+        "total": 1976
+    },
+    {
+        "pengadilan": "PN SIMALUNGUN",
+        "total": 1913
+    },
+    {
+        "pengadilan": "PN KUALA SIMPANG",
+        "total": 1877
+    },
+    {
+        "pengadilan": "PN BALIKPAPAN",
+        "total": 1851
+    },
+    {
+        "pengadilan": "PN BATAM",
+        "total": 1846
+    },
+    {
+        "pengadilan": "PN ROKAN HILIR",
+        "total": 1793
+    },
+    {
+        "pengadilan": "PN BENGKULU",
+        "total": 1721
+    },
+    {
+        "pengadilan": "PT SAMARINDA",
+        "total": 1697
+    },
+    {
+        "pengadilan": "PN TANJUNG PINANG",
+        "total": 1678
+    },
+    {
+        "pengadilan": "PN BANGKINANG",
+        "total": 1660
+    },
+    {
+        "pengadilan": "PN KALIANDA",
+        "total": 1657
+    },
+    {
+        "pengadilan": "PN TEBING TINGGI",
+        "total": 1655
+    },
+    {
+        "pengadilan": "PN BANGIL",
+        "total": 1621
+    },
+    {
+        "pengadilan": "PN MUARA ENIM",
+        "total": 1599
+    },
+    {
+        "pengadilan": "PN PALU",
+        "total": 1599
+    },
+    {
+        "pengadilan": "PN MARTAPURA",
+        "total": 1587
+    },
+    {
+        "pengadilan": "PN KOTABARU",
+        "total": 1574
+    },
+    {
+        "pengadilan": "PN SLEMAN",
+        "total": 1574
+    },
+    {
+        "pengadilan": "PN MATARAM",
+        "total": 1569
+    },
+    {
+        "pengadilan": "PN JANTHO",
+        "total": 1558
+    },
+    {
+        "pengadilan": "PN SURAKARTA",
+        "total": 1549
+    },
+    {
+        "pengadilan": "PN KOTABUMI",
+        "total": 1533
+    },
+    {
+        "pengadilan": "PN YOGYAKARTA",
+        "total": 1523
+    },
+    {
+        "pengadilan": "PN JOMBANG",
+        "total": 1509
+    },
+    {
+        "pengadilan": "PN BANGKALAN",
+        "total": 1476
+    },
+    {
+        "pengadilan": "PN PONTIANAK",
+        "total": 1472
+    },
+    {
+        "pengadilan": "PN BATULICIN",
+        "total": 1440
+    },
+    {
+        "pengadilan": "PN DUMAI",
+        "total": 1409
+    },
+    {
+        "pengadilan": "PN JEMBER",
+        "total": 1405
+    },
+    {
+        "pengadilan": "PN RANTAU",
+        "total": 1352
+    },
+    {
+        "pengadilan": "PN RENGAT",
+        "total": 1331
+    },
+    {
+        "pengadilan": "PN PEMATANG SIANTAR",
+        "total": 1330
+    },
+    {
+        "pengadilan": "PN TERNATE",
+        "total": 1320
+    },
+    {
+        "pengadilan": "PT BANDA ACEH",
+        "total": 1298
+    },
+    {
+        "pengadilan": "PN PADANG SIDEMPUAN",
+        "total": 1284
+    },
+    {
+        "pengadilan": "PN BANJARBARU",
+        "total": 1261
+    },
+    {
+        "pengadilan": "PN LHOK SEUMAWE",
+        "total": 1255
+    },
+    {
+        "pengadilan": "PN SERANG",
+        "total": 1240
+    },
+    {
+        "pengadilan": "PN KANDANGAN",
+        "total": 1232
+    },
+    {
+        "pengadilan": "PN CIBINONG",
+        "total": 1213
+    },
+    {
+        "pengadilan": "PN SUNGGUMINASA",
+        "total": 1201
+    },
+    {
+        "pengadilan": "PT BANDUNG",
+        "total": 1201
+    },
+    {
+        "pengadilan": "PT PADANG",
+        "total": 1186
+    },
+    {
+        "pengadilan": "PN BANYUWANGI",
+        "total": 1184
+    },
+    {
+        "pengadilan": "PT PALU",
+        "total": 1179
+    },
+    {
+        "pengadilan": "PN PELALAWAN",
+        "total": 1175
+    },
+    {
+        "pengadilan": "PN SIBOLGA",
+        "total": 1168
+    },
+    {
+        "pengadilan": "PN LAHAT",
+        "total": 1152
+    },
+    {
+        "pengadilan": "PN MEMPAWAH",
+        "total": 1146
+    },
+    {
+        "pengadilan": "PN PELAIHARI",
+        "total": 1127
+    },
+    {
+        "pengadilan": "PT PONTIANAK",
+        "total": 1101
+    },
+    {
+        "pengadilan": "PN AMBON",
+        "total": 1081
+    },
+    {
+        "pengadilan": "PN PRABUMULIH",
+        "total": 1064
+    },
+    {
+        "pengadilan": "PN SIGLI",
+        "total": 1064
+    },
+    {
+        "pengadilan": "PN SIAK SRI INDRAPURA",
+        "total": 1055
+    },
+    {
+        "pengadilan": "PN PANGKAL PINANG",
+        "total": 1054
+    },
+    {
+        "pengadilan": "PN KABANJAHE",
+        "total": 1053
+    },
+    {
+        "pengadilan": "PN AMUNTAI",
+        "total": 1032
+    },
+    {
+        "pengadilan": "PN TEMBILAHAN",
+        "total": 1018
+    },
+    {
+        "pengadilan": "PN SINGKAWANG",
+        "total": 995
+    },
+    {
+        "pengadilan": "PN SENGKANG",
+        "total": 991
+    },
+    {
+        "pengadilan": "PN LANGSA",
+        "total": 987
+    },
+    {
+        "pengadilan": "PN GORONTALO",
+        "total": 968
+    },
+    {
+        "pengadilan": "PT PALEMBANG",
+        "total": 968
+    },
+    {
+        "pengadilan": "PT BANJARMASIN",
+        "total": 966
+    },
+    {
+        "pengadilan": "PT BANTEN",
+        "total": 957
+    },
+    {
+        "pengadilan": "PN BIREUEN",
+        "total": 939
+    },
+    {
+        "pengadilan": "PN SAMPANG",
+        "total": 938
+    },
+    {
+        "pengadilan": "PN NGANJUK",
+        "total": 935
+    },
+    {
+        "pengadilan": "PN TANAH GROGOT",
+        "total": 934
+    },
+    {
+        "pengadilan": "PN KEBUMEN",
+        "total": 921
+    },
+    {
+        "pengadilan": "PN TASIKMALAYA",
+        "total": 917
+    },
+    {
+        "pengadilan": "PN TANJUNG BALAI KARIMUN",
+        "total": 914
+    },
+    {
+        "pengadilan": "PN PASIR PANGARAIAN",
+        "total": 896
+    },
+    {
+        "pengadilan": "PN MARABAHAN",
+        "total": 895
+    },
+    {
+        "pengadilan": "PN BOGOR",
+        "total": 892
+    },
+    {
+        "pengadilan": "PN CIANJUR",
+        "total": 876
+    },
+    {
+        "pengadilan": "PN KUPANG",
+        "total": 867
+    },
+    {
+        "pengadilan": "PN DEPOK",
+        "total": 864
+    },
+    {
+        "pengadilan": "PN BARABAI",
+        "total": 856
+    },
+    {
+        "pengadilan": "PN KOTA AGUNG",
+        "total": 851
+    },
+    {
+        "pengadilan": "PN BANGKO",
+        "total": 848
+    },
+    {
+        "pengadilan": "PN PANGKALAN BUN",
+        "total": 839
+    },
+    {
+        "pengadilan": "PT PALANGKARAYA",
+        "total": 836
+    },
+    {
+        "pengadilan": "PN PUWAKARTA",
+        "total": 835
+    },
+    {
+        "pengadilan": "PN KETAPANG",
+        "total": 832
+    },
+    {
+        "pengadilan": "PT TANJUNG KARANG",
+        "total": 832
+    },
+    {
+        "pengadilan": "PT KUPANG",
+        "total": 828
+    },
+    {
+        "pengadilan": "PN KEPANJEN",
+        "total": 820
+    },
+    {
+        "pengadilan": "PN TULUNGAGUNG",
+        "total": 804
+    },
+    {
+        "pengadilan": "PN METRO",
+        "total": 799
+    },
+    {
+        "pengadilan": "PN BLITAR",
+        "total": 794
+    },
+    {
+        "pengadilan": "PT YOGYAKARTA",
+        "total": 781
+    },
+    {
+        "pengadilan": "PN TARAKAN",
+        "total": 779
+    },
+    {
+        "pengadilan": "PN GRESIK",
+        "total": 764
+    },
+    {
+        "pengadilan": "PN KENDARI",
+        "total": 764
+    },
+    {
+        "pengadilan": "PT KENDARI",
+        "total": 763
+    },
+    {
+        "pengadilan": "PT JAYAPURA",
+        "total": 761
+    },
+    {
+        "pengadilan": "PN LUMAJANG",
+        "total": 760
+    },
+    {
+        "pengadilan": "PN LHOK SUKON",
+        "total": 747
+    },
+    {
+        "pengadilan": "PN SEI RAMPAH",
+        "total": 745
+    },
+    {
+        "pengadilan": "PN PAMEKASAN",
+        "total": 744
+    },
+    {
+        "pengadilan": "PN KLATEN",
+        "total": 742
+    },
+    {
+        "pengadilan": "PN PARIAMAN",
+        "total": 741
+    },
+    {
+        "pengadilan": "PN SANGGAU",
+        "total": 738
+    },
+    {
+        "pengadilan": "PN CIKARANG",
+        "total": 736
+    },
+    {
+        "pengadilan": "PN GUNUNG SUGIH",
+        "total": 735
+    },
+    {
+        "pengadilan": "PT BENGKULU",
+        "total": 735
+    },
+    {
+        "pengadilan": "PN TANJUNG REDEP",
+        "total": 732
+    },
+    {
+        "pengadilan": "PN TANJUNG",
+        "total": 729
+    },
+    {
+        "pengadilan": "PN PALOPO",
+        "total": 724
+    },
+    {
+        "pengadilan": "PN DONGGALA",
+        "total": 713
+    },
+    {
+        "pengadilan": "PN PARE PARE",
+        "total": 710
+    },
+    {
+        "pengadilan": "PN INDRAMAYU",
+        "total": 709
+    },
+    {
+        "pengadilan": "PN PATI",
+        "total": 693
+    },
+    {
+        "pengadilan": "PN MAMUJU",
+        "total": 692
+    },
+    {
+        "pengadilan": "PN SUMENEP",
+        "total": 692
+    },
+    {
+        "pengadilan": "PN PINRANG",
+        "total": 687
+    },
+    {
+        "pengadilan": "PN SAMPIT",
+        "total": 684
+    },
+    {
+        "pengadilan": "PN GARUT",
+        "total": 683
+    },
+    {
+        "pengadilan": "PN KUTAI BARAT",
+        "total": 673
+    },
+    {
+        "pengadilan": "PN SAMBAS",
+        "total": 653
+    },
+    {
+        "pengadilan": "PN MENGGALA",
+        "total": 644
+    },
+    {
+        "pengadilan": "PN SUMBAWA BESAR",
+        "total": 643
+    },
+    {
+        "pengadilan": "PN SINTANG",
+        "total": 642
+    },
+    {
+        "pengadilan": "PN POLEWALI",
+        "total": 639
+    },
+    {
+        "pengadilan": "PN MASAMBA",
+        "total": 631
+    },
+    {
+        "pengadilan": "PN SUKABUMI",
+        "total": 629
+    },
+    {
+        "pengadilan": "PN SAROLANGUN",
+        "total": 622
+    },
+    {
+        "pengadilan": "PN PURWOKERTO",
+        "total": 621
+    },
+    {
+        "pengadilan": "PN MUARA BUNGO",
+        "total": 619
+    },
+    {
+        "pengadilan": "PN CILACAP",
+        "total": 608
+    },
+    {
+        "pengadilan": "PN GUNUNG SITOLI",
+        "total": 607
+    },
+    {
+        "pengadilan": "PN KAB SEMARANG",
+        "total": 603
+    },
+    {
+        "pengadilan": "PN KUALA TUNGKAL",
+        "total": 598
+    },
+    {
+        "pengadilan": "PN MUARA TEWE",
+        "total": 596
+    },
+    {
+        "pengadilan": "PN TEBO",
+        "total": 595
+    },
+    {
+        "pengadilan": "PN KARAWANG",
+        "total": 591
+    },
+    {
+        "pengadilan": "PN PANDEGLANG",
+        "total": 590
+    },
+    {
+        "pengadilan": "PN JAYAPURA",
+        "total": 584
+    },
+    {
+        "pengadilan": "PN KUNINGAN",
+        "total": 580
+    },
+    {
+        "pengadilan": "PN CIREBON",
+        "total": 578
+    },
+    {
+        "pengadilan": "PN BOYOLALI",
+        "total": 577
+    },
+    {
+        "pengadilan": "PN CIAMIS",
+        "total": 575
+    },
+    {
+        "pengadilan": "PN BULUKUMBA",
+        "total": 574
+    },
+    {
+        "pengadilan": "PN TANJUNG SELOR",
+        "total": 573
+    },
+    {
+        "pengadilan": "PN MEULABOH",
+        "total": 572
+    },
+    {
+        "pengadilan": "PN PEKALONGAN",
+        "total": 569
+    },
+    {
+        "pengadilan": "PN TAPAK TUAN",
+        "total": 559
+    },
+    {
+        "pengadilan": "PN BONTANG",
+        "total": 558
+    },
+    {
+        "pengadilan": "PN SUKADANA",
+        "total": 556
+    },
+    {
+        "pengadilan": "PN RANAI",
+        "total": 543
+    },
+    {
+        "pengadilan": "PN BATANG",
+        "total": 542
+    },
+    {
+        "pengadilan": "PN MANOKWARI",
+        "total": 541
+    },
+    {
+        "pengadilan": "PN PAYAKUMBUH",
+        "total": 541
+    },
+    {
+        "pengadilan": "PN TAKENGON",
+        "total": 540
+    },
+    {
+        "pengadilan": "PN NGAWI",
+        "total": 537
+    },
+    {
+        "pengadilan": "PN BUKITTINGGI",
+        "total": 535
+    },
+    {
+        "pengadilan": "PN KOLAKA",
+        "total": 535
+    },
+    {
+        "pengadilan": "PN IDI",
+        "total": 533
+    },
+    {
+        "pengadilan": "PN MALINAU",
+        "total": 532
+    },
+    {
+        "pengadilan": "PT AMBON",
+        "total": 527
+    },
+    {
+        "pengadilan": "PN MUARA BULIAN",
+        "total": 525
+    },
+    {
+        "pengadilan": "PN KUALA KAPUAS",
+        "total": 521
+    },
+    {
+        "pengadilan": "PN SUKOHARJO",
+        "total": 521
+    },
+    {
+        "pengadilan": "PN MAROS",
+        "total": 517
+    },
+    {
+        "pengadilan": "PN BALIGE",
+        "total": 514
+    },
+    {
+        "pengadilan": "PN BENGKAYANG",
+        "total": 513
+    },
+    {
+        "pengadilan": "PN KABUPATEN MAGELANG DI MUNGKID",
+        "total": 512
+    },
+    {
+        "pengadilan": "PN MOJOKERTO",
+        "total": 512
+    },
+    {
+        "pengadilan": "PN MUARO",
+        "total": 506
+    },
+    {
+        "pengadilan": "PN SINGARAJA",
+        "total": 503
+    },
+    {
+        "pengadilan": "PN BLORA",
+        "total": 493
+    },
+    {
+        "pengadilan": "PN KUTACANE",
+        "total": 492
+    },
+    {
+        "pengadilan": "PN ARGA MAKMUR",
+        "total": 484
+    },
+    {
+        "pengadilan": "PN LAMONGAN",
+        "total": 481
+    },
+    {
+        "pengadilan": "PN BANTA ENG",
+        "total": 480
+    },
+    {
+        "pengadilan": "PN SORONG",
+        "total": 475
+    },
+    {
+        "pengadilan": "PN UNAAHA",
+        "total": 470
+    },
+    {
+        "pengadilan": "PN CURUP",
+        "total": 466
+    },
+    {
+        "pengadilan": "PN LIWA KABUPATEN LAMPUNG BARAT",
+        "total": 466
+    },
+    {
+        "pengadilan": "PN SENGETI",
+        "total": 462
+    },
+    {
+        "pengadilan": "PN RANGKAS BITUNG",
+        "total": 459
+    },
+    {
+        "pengadilan": "PN MADIUN",
+        "total": 456
+    },
+    {
+        "pengadilan": "PN POSO",
+        "total": 454
+    },
+    {
+        "pengadilan": "PT DENPASAR",
+        "total": 452
+    },
+    {
+        "pengadilan": "PN SUMBER",
+        "total": 449
+    },
+    {
+        "pengadilan": "PN KAB MADIUN",
+        "total": 447
+    },
+    {
+        "pengadilan": "PN SUMEDANG",
+        "total": 444
+    },
+    {
+        "pengadilan": "PN BOJONEGORO",
+        "total": 443
+    },
+    {
+        "pengadilan": "PN SIDIKALANG",
+        "total": 443
+    },
+    {
+        "pengadilan": "PN TUBAN",
+        "total": 435
+    },
+    {
+        "pengadilan": "PN TAKALAR",
+        "total": 434
+    },
+    {
+        "pengadilan": "PN PARIGI",
+        "total": 431
+    },
+    {
+        "pengadilan": "PN PASURUAN",
+        "total": 428
+    },
+    {
+        "pengadilan": "PN BATUSANGKAR",
+        "total": 424
+    },
+    {
+        "pengadilan": "PN MANDAILING NATAL",
+        "total": 420
+    },
+    {
+        "pengadilan": "PN SOLOK",
+        "total": 417
+    },
+    {
+        "pengadilan": "PN KARANGAYAR",
+        "total": 412
+    },
+    {
+        "pengadilan": "PN MANADO",
+        "total": 408
+    },
+    {
+        "pengadilan": "PN LUWUK",
+        "total": 401
+    },
+    {
+        "pengadilan": "PN JEPARA",
+        "total": 396
+    },
+    {
+        "pengadilan": "PN LUBUK BASUNG",
+        "total": 396
+    },
+    {
+        "pengadilan": "PN SRAGEN",
+        "total": 394
+    },
+    {
+        "pengadilan": "PT JAMBI",
+        "total": 392
+    },
+    {
+        "pengadilan": "PN WONOGIRI",
+        "total": 389
+    },
+    {
+        "pengadilan": "PN SOE",
+        "total": 388
+    },
+    {
+        "pengadilan": "PN RABA BIMA",
+        "total": 386
+    },
+    {
+        "pengadilan": "PN TEMANGGUNG",
+        "total": 385
+    },
+    {
+        "pengadilan": "PN KASONGAN",
+        "total": 383
+    },
+    {
+        "pengadilan": "PN PUTUSSIBAU",
+        "total": 382
+    },
+    {
+        "pengadilan": "PN KEDIRI",
+        "total": 381
+    },
+    {
+        "pengadilan": "PN PASAMAN BARAT",
+        "total": 381
+    },
+    {
+        "pengadilan": "PN RAHA",
+        "total": 377
+    },
+    {
+        "pengadilan": "PN NUNUKAN",
+        "total": 376
+    },
+    {
+        "pengadilan": "PN BLAMBANGAN UMPU",
+        "total": 374
+    },
+    {
+        "pengadilan": "PN TANJUNG PANDAN",
+        "total": 373
+    },
+    {
+        "pengadilan": "PN PAGAR ALAM",
+        "total": 371
+    },
+    {
+        "pengadilan": "PN PANGKAJENE",
+        "total": 368
+    },
+    {
+        "pengadilan": "PN MALILI",
+        "total": 367
+    },
+    {
+        "pengadilan": "PN SIDENRENG RAPPANG",
+        "total": 367
+    },
+    {
+        "pengadilan": "PN KEPAHIANG",
+        "total": 366
+    },
+    {
+        "pengadilan": "PN KOTOBARU",
+        "total": 364
+    },
+    {
+        "pengadilan": "PN MAGELANG",
+        "total": 361
+    },
+    {
+        "pengadilan": "PN SUBANG",
+        "total": 361
+    },
+    {
+        "pengadilan": "PN KOTAMOBAGU",
+        "total": 360
+    },
+    {
+        "pengadilan": "PN DOMPU",
+        "total": 356
+    },
+    {
+        "pengadilan": "PN MAGETAN",
+        "total": 356
+    },
+    {
+        "pengadilan": "PN KRAKSAAN",
+        "total": 355
+    },
+    {
+        "pengadilan": "PN BLANGKAJEREN",
+        "total": 354
+    },
+    {
+        "pengadilan": "PN TELUK KUANTAN",
+        "total": 350
+    },
+    {
+        "pengadilan": "PN PRAYA",
+        "total": 349
+    },
+    {
+        "pengadilan": "PN PURBALINGGA",
+        "total": 346
+    },
+    {
+        "pengadilan": "PN CIBADAK",
+        "total": 342
+    },
+    {
+        "pengadilan": "PN NEGARA",
+        "total": 340
+    },
+    {
+        "pengadilan": "PN SIMPANG TIGA REDELONG",
+        "total": 337
+    },
+    {
+        "pengadilan": "PN DEMAK",
+        "total": 336
+    },
+    {
+        "pengadilan": "PT MATARAM",
+        "total": 333
+    },
+    {
+        "pengadilan": "PN LUBUK SIKAPING",
+        "total": 332
+    },
+    {
+        "pengadilan": "PN SINGKEL",
+        "total": 330
+    },
+    {
+        "pengadilan": "PN TARUTUNG",
+        "total": 329
+    },
+    {
+        "pengadilan": "PN BREBES",
+        "total": 328
+    },
+    {
+        "pengadilan": "PN TEGAL",
+        "total": 327
+    },
+    {
+        "pengadilan": "PN SINJAI",
+        "total": 325
+    },
+    {
+        "pengadilan": "PN KOTA TIMIKA KABUPATEN MIMIKA",
+        "total": 323
+    },
+    {
+        "pengadilan": "PT BANGKA BELITUNG",
+        "total": 319
+    },
+    {
+        "pengadilan": "PT GORONTALO",
+        "total": 315
+    },
+    {
+        "pengadilan": "PN BUNTOK",
+        "total": 314
+    },
+    {
+        "pengadilan": "PN BARRU",
+        "total": 312
+    },
+    {
+        "pengadilan": "PN PURWODADI",
+        "total": 311
+    },
+    {
+        "pengadilan": "PN PENAJAM",
+        "total": 309
+    },
+    {
+        "pengadilan": "PN TRENGGALEK",
+        "total": 304
+    },
+    {
+        "pengadilan": "PN BAUBAU",
+        "total": 300
+    },
+    {
+        "pengadilan": "PN WONOSARI",
+        "total": 294
+    },
+    {
+        "pengadilan": "PN KUDUS",
+        "total": 283
+    },
+    {
+        "pengadilan": "PN KENDAL",
+        "total": 282
+    },
+    {
+        "pengadilan": "PN CALANG",
+        "total": 281
+    },
+    {
+        "pengadilan": "PN PASANGKAYU",
+        "total": 273
+    },
+    {
+        "pengadilan": "PN TANJUNG PATI",
+        "total": 273
+    },
+    {
+        "pengadilan": "PN PEMALANG",
+        "total": 272
+    },
+    {
+        "pengadilan": "PN WATANSOPENG",
+        "total": 272
+    },
+    {
+        "pengadilan": "PN PROBOLINGGO",
+        "total": 271
+    },
+    {
+        "pengadilan": "PN LIMBOTO",
+        "total": 266
+    },
+    {
+        "pengadilan": "PN PASARWAJO",
+        "total": 266
+    },
+    {
+        "pengadilan": "PN MASOHI",
+        "total": 263
+    },
+    {
+        "pengadilan": "PN PACITAN",
+        "total": 262
+    },
+    {
+        "pengadilan": "PT MANADO",
+        "total": 262
+    },
+    {
+        "pengadilan": "PN SUNGAI PENUH",
+        "total": 258
+    },
+    {
+        "pengadilan": "PN PAINAN",
+        "total": 257
+    },
+    {
+        "pengadilan": "PN MAJALENGKA",
+        "total": 256
+    },
+    {
+        "pengadilan": "PN BANTUL",
+        "total": 254
+    },
+    {
+        "pengadilan": "PN TAMIANG LAYANG",
+        "total": 254
+    },
+    {
+        "pengadilan": "PN GIANYAR",
+        "total": 253
+    },
+    {
+        "pengadilan": "PN WAINGAPU",
+        "total": 250
+    },
+    {
+        "pengadilan": "PN MENTOK",
+        "total": 249
+    },
+    {
+        "pengadilan": "PN OELAMASI",
+        "total": 247
+    },
+    {
+        "pengadilan": "PN KALABAHI",
+        "total": 243
+    },
+    {
+        "pengadilan": "PN SANGATTA",
+        "total": 243
+    },
+    {
+        "pengadilan": "PN BANJARNEGARA",
+        "total": 241
+    },
+    {
+        "pengadilan": "PN TANJUNG JABUNG TIMUR",
+        "total": 238
+    },
+    {
+        "pengadilan": "PN ANDOOLO",
+        "total": 234
+    },
+    {
+        "pengadilan": "PN MAKALE",
+        "total": 232
+    },
+    {
+        "pengadilan": "PN RUTENG",
+        "total": 231
+    },
+    {
+        "pengadilan": "PT MALUKU UTARA",
+        "total": 228
+    },
+    {
+        "pengadilan": "PN BITUNG",
+        "total": 227
+    },
+    {
+        "pengadilan": "PN KABUPATEN TEGAL DI SLAWI",
+        "total": 226
+    },
+    {
+        "pengadilan": "PN WATAMPONE",
+        "total": 226
+    },
+    {
+        "pengadilan": "PN BANYUMAS",
+        "total": 223
+    },
+    {
+        "pengadilan": "PN MAJENE",
+        "total": 221
+    },
+    {
+        "pengadilan": "PN MARISA",
+        "total": 218
+    },
+    {
+        "pengadilan": "PN SABANG",
+        "total": 217
+    },
+    {
+        "pengadilan": "PN MANNA",
+        "total": 216
+    },
+    {
+        "pengadilan": "PN SALATIGA",
+        "total": 215
+    },
+    {
+        "pengadilan": "PN TUAL",
+        "total": 215
+    },
+    {
+        "pengadilan": "PN JENEPONTO",
+        "total": 214
+    },
+    {
+        "pengadilan": "PN WATES",
+        "total": 213
+    },
+    {
+        "pengadilan": "PN TONDANO",
+        "total": 212
+    },
+    {
+        "pengadilan": "PN WAIKABUBAK",
+        "total": 206
+    },
+    {
+        "pengadilan": "PN ENREKANG",
+        "total": 204
+    },
+    {
+        "pengadilan": "PN SAWAHLUNTO",
+        "total": 203
+    },
+    {
+        "pengadilan": "PN PANGKALAN BALAI",
+        "total": 197
+    },
+    {
+        "pengadilan": "PN AMLAPURA",
+        "total": 195
+    },
+    {
+        "pengadilan": "PN BIAK",
+        "total": 194
+    },
+    {
+        "pengadilan": "PN SOASIU",
+        "total": 191
+    },
+    {
+        "pengadilan": "PN NGABANG",
+        "total": 189
+    },
+    {
+        "pengadilan": "PN ATAMBUA",
+        "total": 186
+    },
+    {
+        "pengadilan": "PN BINTUHAN",
+        "total": 184
+    },
+    {
+        "pengadilan": "PN PADANG PANJANG",
+        "total": 182
+    },
+    {
+        "pengadilan": "PN PONOROGO",
+        "total": 182
+    },
+    {
+        "pengadilan": "DILMIL II 08 JAKARTA",
+        "total": 178
+    },
+    {
+        "pengadilan": "PN SEMARAPURA",
+        "total": 176
+    },
+    {
+        "pengadilan": "PN SITUBONDO",
+        "total": 176
+    },
+    {
+        "pengadilan": "DILMILTI II JAKARTA",
+        "total": 174
+    },
+    {
+        "pengadilan": "PN MAUMERE",
+        "total": 174
+    },
+    {
+        "pengadilan": "PN PARINGIN",
+        "total": 172
+    },
+    {
+        "pengadilan": "PN BELOPA",
+        "total": 171
+    },
+    {
+        "pengadilan": "PN WONOSOBO",
+        "total": 171
+    },
+    {
+        "pengadilan": "DILMIL I 01 BANDA ACEH",
+        "total": 168
+    },
+    {
+        "pengadilan": "PN PURWOREJO",
+        "total": 167
+    },
+    {
+        "pengadilan": "PN TABANAN",
+        "total": 159
+    },
+    {
+        "pengadilan": "PN REMBANG",
+        "total": 158
+    },
+    {
+        "pengadilan": "PN LABUHA",
+        "total": 155
+    },
+    {
+        "pengadilan": "PN TUBEI",
+        "total": 151
+    },
+    {
+        "pengadilan": "PN TOBELO",
+        "total": 150
+    },
+    {
+        "pengadilan": "PN KEFAMENANU",
+        "total": 149
+    },
+    {
+        "pengadilan": "PN TAIS",
+        "total": 149
+    },
+    {
+        "pengadilan": "PN TILAMUTA",
+        "total": 148
+    },
+    {
+        "pengadilan": "PN SELONG",
+        "total": 144
+    },
+    {
+        "pengadilan": "PN SIBUHUAN",
+        "total": 143
+    },
+    {
+        "pengadilan": "PN BUOL",
+        "total": 142
+    },
+    {
+        "pengadilan": "PN SINABANG",
+        "total": 141
+    },
+    {
+        "pengadilan": "PN BANGLI",
+        "total": 139
+    },
+    {
+        "pengadilan": "PN TOLITOLI",
+        "total": 138
+    },
+    {
+        "pengadilan": "PN KOBA",
+        "total": 136
+    },
+    {
+        "pengadilan": "PN LARANTUKA",
+        "total": 134
+    },
+    {
+        "pengadilan": "DILMIL II 09 BANDUNG",
+        "total": 133
+    },
+    {
+        "pengadilan": "PN ROTE NDAO",
+        "total": 133
+    },
+    {
+        "pengadilan": "PN MEUREUDU",
+        "total": 131
+    },
+    {
+        "pengadilan": "PN SAUMLAKI",
+        "total": 131
+    },
+    {
+        "pengadilan": "PN SELAYAR",
+        "total": 129
+    },
+    {
+        "pengadilan": "DILMILTI III SURABAYA",
+        "total": 123
+    },
+    {
+        "pengadilan": "PN WAMENA",
+        "total": 123
+    },
+    {
+        "pengadilan": "PN PULANG PISAU",
+        "total": 118
+    },
+    {
+        "pengadilan": "DILMIL I 06 BANJARMASIN",
+        "total": 117
+    },
+    {
+        "pengadilan": "PN SUKA MAKMUE",
+        "total": 116
+    },
+    {
+        "pengadilan": "PN BAJAWA",
+        "total": 115
+    },
+    {
+        "pengadilan": "PN SERUI",
+        "total": 114
+    },
+    {
+        "pengadilan": "PN NABIRE",
+        "total": 113
+    },
+    {
+        "pengadilan": "DILMIL I 04 PALEMBANG",
+        "total": 111
+    },
+    {
+        "pengadilan": "PN PULAU PUNJUNG",
+        "total": 104
+    },
+    {
+        "pengadilan": "PN LASUSUA",
+        "total": 97
+    },
+    {
+        "pengadilan": "PN BONDOWOSO",
+        "total": 96
+    },
+    {
+        "pengadilan": "PN KUALA KURUN",
+        "total": 91
+    },
+    {
+        "pengadilan": "DILMIL III 16 MAKASSAR",
+        "total": 89
+    },
+    {
+        "pengadilan": "PN LEMBATA",
+        "total": 88
+    },
+    {
+        "pengadilan": "PN MUKOMUKO",
+        "total": 79
+    },
+    {
+        "pengadilan": "PN TAHUNA",
+        "total": 78
+    },
+    {
+        "pengadilan": "PN SANANA",
+        "total": 77
+    },
+    {
+        "pengadilan": "PN NANGA BULIK",
+        "total": 73
+    },
+    {
+        "pengadilan": "PN WANGI WANGI",
+        "total": 60
+    },
+    {
+        "pengadilan": "PTUN JAKARTA",
+        "total": 58
+    },
+    {
+        "pengadilan": "PN LABUAN BAJO",
+        "total": 56
+    },
+    {
+        "pengadilan": "PN NAMLEA",
+        "total": 56
+    },
+    {
+        "pengadilan": "PN FAK FAK",
+        "total": 54
+    },
+    {
+        "pengadilan": "PN DATARAN HUNIPOPU",
+        "total": 53
+    },
+    {
+        "pengadilan": "PN BLANGPIDIE",
+        "total": 49
+    },
+    {
+        "pengadilan": "PN AMURANG",
+        "total": 47
+    },
+    {
+        "pengadilan": "PN DOBO",
+        "total": 46
+    },
+    {
+        "pengadilan": "DILMILTAMA",
+        "total": 42
+    },
+    {
+        "pengadilan": "PN GEDONG TATAAN",
+        "total": 40
+    },
+    {
+        "pengadilan": "PTTUN JAKARTA",
+        "total": 40
+    },
+    {
+        "pengadilan": "DILMILTI I MEDAN",
+        "total": 35
+    },
+    {
+        "pengadilan": "PN ENDE",
+        "total": 33
+    },
+    {
+        "pengadilan": "BADAN PERADILAN UMUM",
+        "total": 29
+    },
+    {
+        "pengadilan": "DILMIL III 18 AMBON",
+        "total": 28
+    },
+    {
+        "pengadilan": "PN AIRMADIDI",
+        "total": 28
+    },
+    {
+        "pengadilan": "PN BANJAR",
+        "total": 28
+    },
+    {
+        "pengadilan": "DILMIL II 10 SEMARANG",
+        "total": 27
+    },
+    {
+        "pengadilan": "PN BOBONG",
+        "total": 26
+    },
+    {
+        "pengadilan": "DILMIL I 03 PADANG",
+        "total": 25
+    },
+    {
+        "pengadilan": "PN DATARAN HUNIMOA",
+        "total": 24
+    },
+    {
+        "pengadilan": "DILMIL III 19 JAYAPURA",
+        "total": 23
+    },
+    {
+        "pengadilan": "PN KAIMANA",
+        "total": 18
+    },
+    {
+        "pengadilan": "DILMIL III 17 MANADO",
+        "total": 17
+    },
+    {
+        "pengadilan": "PN MERAUKE",
+        "total": 16
+    },
+    {
+        "pengadilan": "PTUN BANDUNG",
+        "total": 14
+    },
+    {
+        "pengadilan": "MS PROP NAD",
+        "total": 13
+    },
+    {
+        "pengadilan": "DILMIL III 15 KUPANG",
+        "total": 12
+    },
+    {
+        "pengadilan": "MS KUTACANE",
+        "total": 10
+    },
+    {
+        "pengadilan": "PA PURWODADI",
+        "total": 9
+    },
+    {
+        "pengadilan": "PTTUN SURABAYA",
+        "total": 9
+    },
+    {
+        "pengadilan": "DILMIL III 12 SURABAYA",
+        "total": 7
+    },
+    {
+        "pengadilan": "PN LATIHAN",
+        "total": 7
+    },
+    {
+        "pengadilan": "PTUN MEDAN",
+        "total": 7
+    },
+    {
+        "pengadilan": "PTUN SAMARINDA",
+        "total": 7
+    },
+    {
+        "pengadilan": "PTUN SEMARANG",
+        "total": 6
+    },
+    {
+        "pengadilan": "PTUN SERANG",
+        "total": 6
+    },
+    {
+        "pengadilan": "DILMIL I 05 PONTIANAK",
+        "total": 5
+    },
+    {
+        "pengadilan": "MS SIGLI",
+        "total": 5
+    },
+    {
+        "pengadilan": "PTUN BANDA ACEH",
+        "total": 5
+    },
+    {
+        "pengadilan": "PTTUN MAKASSAR",
+        "total": 4
+    },
+    {
+        "pengadilan": "DILMIL LATIHAN",
+        "total": 3
+    },
+    {
+        "pengadilan": "MS LHOK SEUMAWE",
+        "total": 3
+    },
+    {
+        "pengadilan": "PA KAB MALANG",
+        "total": 3
+    },
+    {
+        "pengadilan": "PTUN MAKASSAR",
+        "total": 3
+    },
+    {
+        "pengadilan": "PTUN PEKAN BARU",
+        "total": 3
+    },
+    {
+        "pengadilan": "PTUN SURABAYA",
+        "total": 3
+    },
+    {
+        "pengadilan": "DILMIL II 11 YOGYAKARTA",
+        "total": 2
+    },
+    {
+        "pengadilan": "PA MATARAM",
+        "total": 2
+    },
+    {
+        "pengadilan": "PN MELONGUANE",
+        "total": 2
+    },
+    {
+        "pengadilan": "PTUN DENPASAR",
+        "total": 2
+    },
+    {
+        "pengadilan": "PTUN JAYAPURA",
+        "total": 2
+    },
+    {
+        "pengadilan": "PTUN PALEMBANG",
+        "total": 2
+    },
+    {
+        "pengadilan": "PTUN TANJUNG PINANG",
+        "total": 2
+    },
+    {
+        "pengadilan": "DILMIL III 14 DENPASAR",
+        "total": 1
+    },
+    {
+        "pengadilan": "MS BANDA ACEH",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA BANJARMASIN",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA GRESIK",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA LAHAT",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA MAGETAN",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA MAKASSAR",
+        "total": 1
+    },
+    {
+        "pengadilan": "PA PELAIHARI",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTA BANDUNG",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTA SEMARANG",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTTUN MEDAN",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN BENGKULU",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN LATIHAN",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN MANADO",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN PADANG",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN PALANGKARAYA",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN PONTIANAK",
+        "total": 1
+    },
+    {
+        "pengadilan": "PTUN YOGYAKARTA",
+        "total": 1
+    }
+]
