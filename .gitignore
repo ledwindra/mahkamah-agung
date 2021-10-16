@@ -132,3 +132,4 @@ dmypy.json
 .vscode
 host.txt
 by_direktori_yearly.json
+util/
