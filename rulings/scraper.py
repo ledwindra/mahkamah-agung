@@ -63,7 +63,7 @@ class Aggregate(Content):
             total = int(b.text.split()[-1])
             data.append({"direktori": overall, "total": total})
 
-        self.save_to_json(data, "data/direktori.json")
+        self.save_to_json(data, "data/direktori")
 
         return data
 
@@ -116,40 +116,45 @@ class Aggregate(Content):
                 data = [x.text.split("\n") for x in tr]
                 data = [dictionary(p, based, select_value(x)) for x in data]
                 _periode.append(data)
-
-        self.save_to_json(_periode, "data/periode.json")
+                self.save_to_json(_periode, "data/periode")
 
         return _periode
     
     def klasifikasi(self, proxies=None):
-        """Returns klasifikasi for each direktori, e.g. Perceraian, Pengesahan Nikah from Perdata Agama
+        """Returns total rulings by klasifikasi for each direktori, e.g. Perceraian, Pengesahan Nikah from Perdata Agama
         """
+        dictionary = lambda direktori, data: {
+            "direktori": direktori,
+            "klasifikasi": " ".join(data[:-1]),
+            "total": data[-1]
+        }
         response = self.get_response(self.BASE_URL, proxies)
         bs = self.parse_content(response)
         bs = bs.select("#collapseZero > div:nth-child(1) > div:nth-child(1)")[0]
         a = bs.find_all("a")
         href = [x["href"] for x in a][1:]
         _klasifikasi = []
-        dictionary = lambda h, x: {
-            "direktori": h,
-            "klasifikasi": " ".join(x[:-1]),
-            "total": x[-1]
-        }
         for h in href:
             response = self.get_response(h, proxies)
             bs = self.parse_content(response)
             k = bs.select("#collapseThree > div:nth-child(1) > div:nth-child(1)")[0]
-            k = [x.text for x in k.find_all("div", {"class": "form-check"})]
-            k = [re.sub("[\n\r]", "", x).split(" ") for x in k]
-            k = [[j for j in i if j != ""] for i in k]
-            k = [dictionary(h, x) for x in k]
-            _klasifikasi.append(k)
-
-        self.save_to_json(_klasifikasi, "data/klasifikasi.json")
+            k = [x for x in k.find_all("div", {"class": "form-check"})]
+            k = [[x.find("a")["href"], re.sub("[\n\r]", "", x.text).split(" ")] for x in k]
+            for _k in k:
+                direktori = _k[0].replace("https://putusan3.mahkamahagung.go.id/direktori/index/kategori/", "")
+                direktori = direktori.replace(".html", "")
+                data = [x for x in _k[1] if x != ""]
+                _klasifikasi.append(dictionary(direktori, data))
+                self.save_to_json(_klasifikasi, "data/klasifikasi")
 
         return _klasifikasi
 
     def periode_klasifikasi(self, proxies=None):
+        """Returns total rulings by klasifikasi grouped by:
+            - Court name, e.g. "PN Jakarta Barat", "PN Kudus", etc
+            - Type of ruling: either "putus", "register", "upload"
+            - Year: self-explanatory
+        """
         select_value = lambda text: [x for x in text if x != ""]
         dictionary = lambda _direktori, pengadilan, based, data: {
             "direktori": _direktori,
@@ -160,37 +165,30 @@ class Aggregate(Content):
         }
 
         klasifikasi = self.klasifikasi()
-        direktori = []
-        for i in klasifikasi:
-            for j in i:
-                if j["direktori"] not in direktori:
-                    direktori.append(j["direktori"])
-
+        direktori = [x["direktori"] for x in klasifikasi]
         _periode_klasifikasi = []
         for based in ["putus", "register", "upload"]:
-            old = "https://putusan3.mahkamahagung.go.id/direktori/index/kategori/"
-            new = f"https://putusan3.mahkamahagung.go.id/direktori/periode/tahunjenis/{based}/kategori/"
-            direktori = [x.replace(old, new) for x in direktori]
             for d in direktori:
-                response = self.get_response(d)
+                url = f"https://putusan3.mahkamahagung.go.id/direktori/periode/tahunjenis/{based}/kategori/{d}.html"
+                response = self.get_response(url, proxies)
                 bs = self.parse_content(response)
                 pengadilan = bs.select("#id_pengadilan")[0]
                 pengadilan = pengadilan.find_all("option")
                 pengadilan = [x["value"] for x in pengadilan]
-                for p in pengadilan:
-                    if p == "":
-                        url = d
+                for p in pengadilan[:3]:
+                    if p != "":
+                        response = requests.get(f"{url.replace('.html', '')}/pengadilan/{p}.html", proxies)
                     else:
-                        d = d.replace(".html", "")
-                        url = f"{d}/pengadilan/{p}.html"
-                    response = self.get_response(url)
+                        response = requests.get(url, proxies)
+                    bs = self.parse_content(response)
                     data = bs.select(".table")[0]
                     tr = data.find("tbody").find_all("tr")
+                    _direktori = url.replace("https://putusan3.mahkamahagung.go.id/direktori/periode/tahunjenis/putus/kategori/", "")
+                    _direktori = _direktori.replace(".html", "")
                     data = [x.text.split("\n") for x in tr]
-                    data = [dictionary(url, p, based, select_value(x)) for x in data]
+                    data = [dictionary(_direktori, p, based, select_value(x)) for x in data]
                     _periode_klasifikasi.append(data)
-
-        self.save_to_json(_periode_klasifikasi, "data/periode_klasifikasi.json")
+                    self.save_to_json(_periode_klasifikasi, "data/periode_klasifikasi")
 
         return _periode_klasifikasi
 
