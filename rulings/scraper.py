@@ -86,7 +86,7 @@ class Aggregate(Content):
 
     def periode(self, proxies=None):
         """Returns total rulings grouped by:
-            - Court name, e.g. "PN Jakarta Barat", "PN Kudus", etc
+            - Court name, e.g. "PN Jakarta Barat", "PN Kudus", etc. Empty court name means all courts
             - Type of ruling: either "putus", "register", "upload"
             - Year: self-explanatory
         """
@@ -151,7 +151,7 @@ class Aggregate(Content):
 
     def periode_klasifikasi(self, proxies=None):
         """Returns total rulings by klasifikasi grouped by:
-            - Court name, e.g. "PN Jakarta Barat", "PN Kudus", etc
+            - Court name, e.g. "PN Jakarta Barat", "PN Kudus", etc. Empty court name means all courts
             - Type of ruling: either "putus", "register", "upload"
             - Year: self-explanatory
         """
@@ -175,7 +175,7 @@ class Aggregate(Content):
                 pengadilan = bs.select("#id_pengadilan")[0]
                 pengadilan = pengadilan.find_all("option")
                 pengadilan = [x["value"] for x in pengadilan]
-                for p in pengadilan[:3]:
+                for p in pengadilan:
                     if p != "":
                         response = requests.get(f"{url.replace('.html', '')}/pengadilan/{p}.html", proxies)
                     else:
@@ -188,7 +188,7 @@ class Aggregate(Content):
                     data = [x.text.split("\n") for x in tr]
                     data = [dictionary(_direktori, p, based, select_value(x)) for x in data]
                     _periode_klasifikasi.append(data)
-                    self.save_to_json(_periode_klasifikasi, "data/periode_klasifikasi")
+                    self.save_to_json(_periode_klasifikasi, "data/periode-klasifikasi")
 
         return _periode_klasifikasi
 
