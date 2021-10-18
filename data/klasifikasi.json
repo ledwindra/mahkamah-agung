@@ -2,12 +2,12 @@
     {
         "direktori": "perdata-agama-1",
         "klasifikasi": "Perdata Agama",
-        "total": "4526802"
+        "total": "4526805"
     },
     {
         "direktori": "perceraian",
         "klasifikasi": "Perceraian",
-        "total": "3577664"
+        "total": "3577667"
     },
     {
         "direktori": "pengesahan-nikah-1",
@@ -202,7 +202,7 @@
     {
         "direktori": "perdata-1",
         "klasifikasi": "Perdata",
-        "total": "651167"
+        "total": "651173"
     },
     {
         "direktori": "perceraian-2",
@@ -212,7 +212,7 @@
     {
         "direktori": "perbuatan-melawan-hukum-1",
         "klasifikasi": "Perbuatan Melawan Hukum",
-        "total": "82729"
+        "total": "82730"
     },
     {
         "direktori": "tanah-1",
@@ -247,12 +247,12 @@
     {
         "direktori": "pidana-khusus-1",
         "klasifikasi": "Pidana Khusus",
-        "total": "412390"
+        "total": "412413"
     },
     {
         "direktori": "narkotika-dan-psikotropika-1",
         "klasifikasi": "Narkotika dan Psikotropika",
-        "total": "257147"
+        "total": "257165"
     },
     {
         "direktori": "korupsi-1",
@@ -262,7 +262,7 @@
     {
         "direktori": "peradilan-anak-abh-1",
         "klasifikasi": "Peradilan Anak ABH",
-        "total": "19585"
+        "total": "19586"
     },
     {
         "direktori": "anak-1",
@@ -272,12 +272,12 @@
     {
         "direktori": "senjata-api-2",
         "klasifikasi": "Senjata Api",
-        "total": "11917"
+        "total": "11918"
     },
     {
         "direktori": "lain-lain-1",
         "klasifikasi": "Lain-lain",
-        "total": "9868"
+        "total": "9869"
     },
     {
         "direktori": "lingkungan-hidup-2",
@@ -307,7 +307,7 @@
     {
         "direktori": "pertambangan-1",
         "klasifikasi": "Pertambangan",
-        "total": "1890"
+        "total": "1891"
     },
     {
         "direktori": "perdagangan-orang-1",
@@ -332,7 +332,7 @@
     {
         "direktori": "pornografi-1",
         "klasifikasi": "Pornografi",
-        "total": "459"
+        "total": "460"
     },
     {
         "direktori": "migas-1",
@@ -592,7 +592,7 @@
     {
         "direktori": "perdata-khusus",
         "klasifikasi": "Perdata Khusus",
-        "total": "33379"
+        "total": "33380"
     },
     {
         "direktori": "phi",
