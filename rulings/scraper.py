@@ -534,31 +534,34 @@ class Case(Content):
         """
         _json = []
         for url in data:
-            response = self.get_response(url, proxies)
-            bs = self.parse_content(response)
-            d = {
-                "putusan": self.putusan(bs),
-                "nomor": self.nomor(bs),
-                "tingkat_proses": self.tingkat_proses(bs),
-                "klasifikasi": self.klasifikasi(bs),
-                "kata_kunci": self.kata_kunci(bs),
-                "tahun": self.tahun(bs),
-                "tanggal_register": self.tanggal_register(bs),
-                "lembaga_peradilan": self.lembaga_peradilan(bs),
-                "jenis_lembaga_peradilan": self.jenis_lembaga_peradilan(bs),
-                "hakim_ketua": self.hakim_ketua(bs),
-                "hakim_anggota": self.hakim_anggota(bs),
-                "panitera": self.panitera(bs),
-                "amar": self.amar(bs),
-                "amar_lainnya": self.amar_lainnya(bs),
-                "catatan_amar": self.catatan_amar(bs),
-                "tanggal_musyawarah": self.tanggal_musyawarah(bs),
-                "tanggal_dibacakan": self.tanggal_dibacakan(bs),
-                "kaidah": self.kaidah(bs),
-                "abstrak": self.abstrak(bs)
-            }
-            _json.append(d)
-            self.save_to_json(_json, "data/putusan-per-kasus")
+            try:
+                response = self.get_response(url, proxies)
+                bs = self.parse_content(response)
+                d = {
+                    "putusan": self.putusan(bs),
+                    "nomor": self.nomor(bs),
+                    "tingkat_proses": self.tingkat_proses(bs),
+                    "klasifikasi": self.klasifikasi(bs),
+                    "kata_kunci": self.kata_kunci(bs),
+                    "tahun": self.tahun(bs),
+                    "tanggal_register": self.tanggal_register(bs),
+                    "lembaga_peradilan": self.lembaga_peradilan(bs),
+                    "jenis_lembaga_peradilan": self.jenis_lembaga_peradilan(bs),
+                    "hakim_ketua": self.hakim_ketua(bs),
+                    "hakim_anggota": self.hakim_anggota(bs),
+                    "panitera": self.panitera(bs),
+                    "amar": self.amar(bs),
+                    "amar_lainnya": self.amar_lainnya(bs),
+                    "catatan_amar": self.catatan_amar(bs),
+                    "tanggal_musyawarah": self.tanggal_musyawarah(bs),
+                    "tanggal_dibacakan": self.tanggal_dibacakan(bs),
+                    "kaidah": self.kaidah(bs),
+                    "abstrak": self.abstrak(bs)
+                }
+                _json.append(d)
+                self.save_to_json(_json, "data/putusan-per-kasus")
+            except AttributeError:
+                pass
 
         return _json
 
