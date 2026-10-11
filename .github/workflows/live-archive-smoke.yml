@@ -14,7 +14,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install pypdf requests
+      - name: Check out candidate importer
+        run: |
+          git fetch origin feature/local-pdf-corpus-import
+          git checkout --detach FETCH_HEAD
+      - run: python -m pip install -r requirements-archive.txt
       - name: Download and extract real externally archived decision PDF
         run: |
           python - <<'PY'
@@ -28,9 +32,25 @@ jobs:
           print("HTTP:",r.status_code,"type:",r.headers.get("Content-Type"),"bytes:",len(r.content))
           r.raise_for_status()
           assert r.content[:8].startswith(b"%PDF-")
+          from pathlib import Path
+          Path('real-test.pdf').write_bytes(r.content)
           reader=PdfReader(BytesIO(r.content))
           assert len(reader.pages) >= 1
           txt=reader.pages[0].extract_text() or ""
           print("REAL PDF VERIFIED pages:",len(reader.pages),"page1 text chars:",len(txt))
           assert len(txt.strip()) >= 10
+          PY
+      - name: Run our production importer on retrieved real PDF
+        run: |
+          python -m rulings.import_corpus real-test.pdf --output smoke-real --source github-research-archive --text
+          python -m rulings.archive stats --output smoke-real
+          python - <<'PY'
+          from pathlib import Path
+          import sqlite3
+          r=Path('smoke-real')
+          with sqlite3.connect(r/'index.sqlite3') as db:
+            status,pdf_path,txt_path,chars,pages=db.execute('SELECT status,pdf_path,text_path,text_chars,page_count FROM decisions LIMIT 1').fetchone()
+          assert status=='text_extracted' and chars>1000 and pages==12,(status,chars,pages)
+          assert (r/pdf_path).is_file() and (r/txt_path).is_file()
+          print('END TO END ARCHIVE VERIFIED:',status,'pages:',pages,'characters:',chars)
           PY
