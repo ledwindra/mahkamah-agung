@@ -255,18 +255,23 @@ def process(db: sqlite3.Connection, client: Client, url: str, root: Path,
         raise ValueError("Not a decision detail URL: " + url)
     prior = db.execute("SELECT * FROM decisions WHERE detail_url=?", (url,)).fetchone()
     if prior is not None and not force:
-        if prior["status"] in ("text_extracted", "scanned_pdf", "pdf_saved", "no_pdf") or (prior["status"] == "metadata_only" and not download):
-            if prior["status"] in ("text_extracted", "scanned_pdf", "pdf_saved") and text and prior["pdf_path"]:
-                pdf_file = root / prior["pdf_path"]
-                if pdf_file.is_file() and prior["status"] == "pdf_saved":
-                    txt_file = Path("text") / (digest_for_url(url) + ".txt")
-                    count, chars = extract_text(pdf_file, root / txt_file)
-                    status = "text_extracted" if chars else "scanned_pdf"
-                    record(db, url, text_path=str(txt_file), page_count=count,
-                           text_chars=chars, status=status, error=None)
-                    return status
-            else:
+        status = prior["status"]
+        pdf_exists = bool(prior["pdf_path"] and (root / prior["pdf_path"]).is_file())
+        if status == "no_pdf":
+            return "skipped"
+        if status == "metadata_only" and not download:
+            return "skipped"
+        if status in ("text_extracted", "scanned_pdf") and pdf_exists:
+            return "skipped"
+        if status == "pdf_saved" and pdf_exists:
+            if not text:
                 return "skipped"
+            txt_file = Path("text") / (digest_for_url(url) + ".txt")
+            count, chars = extract_text(root / prior["pdf_path"], root / txt_file)
+            new_status = "text_extracted" if chars else "scanned_pdf"
+            record(db, url, text_path=str(txt_file), page_count=count,
+                   text_chars=chars, status=new_status, error=None)
+            return new_status
 
     html = client.html(url)
     metadata, pdf_url = parse_detail(html, url)
