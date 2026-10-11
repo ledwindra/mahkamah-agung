@@ -6,6 +6,7 @@ on:
       - main
       - feature/decision-pdf-archive
       - feature/local-pdf-corpus-import
+      - feature/local-browser-access-check
   pull_request:
   workflow_dispatch:
 
