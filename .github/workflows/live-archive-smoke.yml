@@ -16,7 +16,7 @@ jobs:
           python-version: '3.11'
       - name: Check out candidate importer
         run: |
-          git fetch origin feature/local-pdf-corpus-import
+          git fetch origin main
           git checkout --detach FETCH_HEAD
       - run: python -m pip install -r requirements-archive.txt
       - name: Download and extract real externally archived decision PDF
@@ -53,4 +53,29 @@ jobs:
           assert status=='text_extracted' and chars>1000 and pages==12,(status,chars,pages)
           assert (r/pdf_path).is_file() and (r/txt_path).is_file()
           print('END TO END ARCHIVE VERIFIED:',status,'pages:',pages,'characters:',chars)
+          PY
+
+      - name: Download and import real Indo-Law XML with original court URL
+        run: |
+          python - <<'PY'
+          import requests
+          url='https://raw.githubusercontent.com/ir-nlp-csui/indo-law/main/dataset/00035681c8d944203f25d2e8215ae2bf.xml'
+          r=requests.get(url,timeout=25)
+          print('Indo-Law XML HTTP:',r.status_code,'bytes:',len(r.content))
+          r.raise_for_status()
+          open('real-test.xml','wb').write(r.content)
+          PY
+          python -m rulings.import_corpus real-test.xml --output smoke-real --source ir-nlp-csui/indo-law
+          python -m rulings.archive stats --output smoke-real
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+          r=Path('smoke-real')
+          con=sqlite3.connect(r/'index.sqlite3')
+          row=con.execute("SELECT status, detail_url, text_chars, text_path FROM decisions WHERE status='text_imported' LIMIT 1").fetchone()
+          assert row is not None,row
+          status,url,chars,path=row
+          assert url.endswith('/00035681c8d944203f25d2e8215ae2bf.html')
+          assert chars>100 and (r/path).is_file()
+          print('REAL XML IMPORT VERIFIED:',status,chars,'characters',url)
           PY
