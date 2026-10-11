@@ -3,6 +3,7 @@ name: Archive unit tests
 on:
   push:
     branches:
+      - main
       - feature/decision-pdf-archive
   pull_request:
   workflow_dispatch:
