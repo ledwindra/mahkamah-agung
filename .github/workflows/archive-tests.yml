@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - feature/decision-pdf-archive
+      - feature/local-pdf-corpus-import
   pull_request:
   workflow_dispatch:
 
