@@ -116,12 +116,26 @@ def probe(args) -> int:
                                "content_type": None, "bytes": None, "pdf_valid": False}
                     diagnostic["attempts"].append(attempt)
                     try:
-                        result = context.request.get(pdf_url, timeout=args.timeout * 1000,
-                                                     max_redirects=3,
-                                                     headers={"Referer": case_url})
-                        # Requests to non-official redirected targets are disallowed by policy:
-                        if urlsplit(result.url).hostname != HOST or urlsplit(result.url).scheme != "https":
-                            attempt["error"] = "External redirect ignored"
+                        target = pdf_url
+                        result = None
+                        for _ in range(4):
+                            result = context.request.get(target, timeout=args.timeout * 1000,
+                                                         max_redirects=0,
+                                                         headers={"Referer": case_url})
+                            if result.status not in (301, 302, 303, 307, 308):
+                                break
+                            location = result.headers.get("location", "")
+                            try:
+                                target = official_url(urljoin(target, location))
+                            except ValueError:
+                                attempt["error"] = "External redirect refused"
+                                break
+                            if not location:
+                                attempt["error"] = "Missing redirect Location"
+                                break
+                        else:
+                            attempt["error"] = "Too many redirects"
+                        if attempt.get("error"):
                             continue
                         attempt["status"] = result.status
                         attempt["content_type"] = result.headers.get("content-type")
