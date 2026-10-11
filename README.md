@@ -1,3 +1,5 @@
+> **New (2026):** Local-first decision PDF downloading, text extraction, resumable SQLite indexing, and a one-command setup for macOS/Linux and Windows are described in [README-ARCHIVE.md](README-ARCHIVE.md). The PDF endpoint has not yet been verified from this environment; run the documented one-decision live smoke test before collecting at scale.
+
 # About 🧑🏻‍⚖️
 
 This repository aims to scrape Supreme Court of Indonesia's rulings website. It contains statistics and ruling details over several types, which are broken down into courts and time periods (year and month). Following are the ruling types:

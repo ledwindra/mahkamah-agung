@@ -133,3 +133,8 @@ dmypy.json
 host.txt
 by_direktori_yearly.json
 util/
+# Downloaded decision PDFs, extracted text and local SQLite index
+archive/
+*.sqlite3
+*.pdf.part
+*.txt.part
