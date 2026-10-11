@@ -1,3 +1,5 @@
+> **Research data fallback (2026):** Direct HTTP access to the court's PDF server currently returns 403 from GitHub-hosted Linux. See [README-ALTERNATIVE-SOURCES.md](README-ALTERNATIVE-SOURCES.md) for a verified 831-PDF external subset, 22,630 annotated decision-text records, and a new local PDF/XML importer. These are partial datasets, not a national archive.
+
 > **New (2026):** Local-first decision PDF downloading, text extraction, resumable SQLite indexing, and a one-command setup for macOS/Linux and Windows are described in [README-ARCHIVE.md](README-ARCHIVE.md). The PDF endpoint has not yet been verified from this environment; run the documented one-decision live smoke test before collecting at scale.
 
 # About 🧑🏻‍⚖️
