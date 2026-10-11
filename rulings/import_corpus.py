@@ -104,13 +104,13 @@ def import_xml(db, src: Path, archive: Path, origin: str):
     # Section names retained for downstream legal NLP tasks.
     sections = []
     for element in root:
-        body = " ".join((element.text or "").split())
+        body = " ".join(" ".join(element.itertext()).split())
         if body:
             sections.append(element.tag + "\n" + body)
     fulltext = "\n\n".join(sections)
     if not fulltext:
         raise ValueError("XML contains no extracted decision text: " + str(src))
-    txt_rel = Path("text") / (digest_for_url(url) + ".txt")
+    txt_rel = Path("text") / "indolaw" / (digest_for_url(url) + ".txt")
     dest = archive / txt_rel
     dest.parent.mkdir(parents=True, exist_ok=True)
     temp = dest.with_suffix(".txt.part")
