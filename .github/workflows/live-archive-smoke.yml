@@ -1,60 +1,36 @@
-name: Alternative official hosts and JDIH retrieval test
+name: Public GitHub PDF file smoke
 
 on:
   push:
     branches:
       - verify/live-pdf-smoke-20261010
-  workflow_dispatch:
 
 jobs:
-  source-probes:
+  github-pdf:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install
-        run: python -m pip install -r requirements-archive.txt
-      - name: Test official hosts, JDIH catalog links, direct document PDF
+      - run: python -m pip install pypdf requests
+      - name: Download and extract real externally archived decision PDF
         run: |
           python - <<'PY'
-          import requests,io
-          from bs4 import BeautifulSoup
+          from io import BytesIO
+          from urllib.parse import quote
+          import requests
           from pypdf import PdfReader
-          session=requests.Session()
-          session.headers['User-Agent']='CourtDecisionResearchArchive/0.1 (+public research)'
-          targets = [
-            'https://jdih.mahkamahagung.go.id/dokumen?jenis=putusan',
-            'https://jdih.mahkamahagung.go.id/dokumen-hukum/putusan/zaf0ef9726825740981f313631343531',
-            'https://jdih.mahkamahagung.go.id/download-file-satker/putusan',
-            'https://putusan.mahkamahagung.go.id/',
-            'https://putusan2.mahkamahagung.go.id/',
-            'https://putusan3.mahkamahagung.go.id/direktori',
-            'https://putusan3.mahkamahagung.go.id/putusan/2aeecc3d40d5001c975b313013013032',
-            'https://putusan3.mahkamahagung.go.id/search/index/pencarian/ajax/putusan',
-          ]
-          for url in targets:
-            print('--- URL',url,flush=True)
-            try:
-              with session.get(url,timeout=12,allow_redirects=False,stream=True) as r:
-                body=bytearray()
-                for chunk in r.iter_content(65536):
-                  body.extend(chunk)
-                  if len(body)>5_000_000: break
-                print('status',r.status_code,'ct',r.headers.get('Content-Type'),'bytes',len(body),'pdf',b'%PDF-' in body[:1024],flush=True)
-                if r.status_code==200 and b'%PDF-' in body[:1024]:
-                  try:
-                    reader=PdfReader(io.BytesIO(body))
-                    print('pdf pages',len(reader.pages),'page1 text chars',len(reader.pages[0].extract_text() or ''),flush=True)
-                  except Exception as exc:
-                    print('pdf parse issue',type(exc).__name__,str(exc)[:160],flush=True)
-                elif r.status_code==200 and '<html' in body[:2000].decode('utf-8','ignore').lower():
-                  s=BeautifulSoup(body,'html.parser')
-                  anchors=[(a.get_text(' ',strip=True)[:90],a.get('href','')[:180]) for a in s.select('a[href]')]
-                  pdfs=[a for a in anchors if ('pdf' in a[1].lower() or 'download' in a[1].lower())]
-                  print('links total',len(anchors),'pdf download links',pdfs[:5],flush=True)
-            except Exception as exc:
-              print('ERROR',type(exc).__name__,str(exc)[:350],flush=True)
+          url="https://raw.githubusercontent.com/xrenxf/Dataset-Kasasi-Perdata-Kasus-Perbuatan-Melawan-Hukum-Tahun-2023-2024/main/Putusan%20Pengadilan/putusan_1007_k_pdt_2023_20241025022057.pdf"
+          r=requests.get(url,timeout=25)
+          print("url:",url)
+          print("HTTP:",r.status_code,"type:",r.headers.get("Content-Type"),"bytes:",len(r.content))
+          r.raise_for_status()
+          assert r.content[:8].startswith(b"%PDF-")
+          reader=PdfReader(BytesIO(r.content))
+          assert len(reader.pages) >= 1
+          txt=reader.pages[0].extract_text() or ""
+          print("REAL PDF VERIFIED pages:",len(reader.pages),"page1 text chars:",len(txt))
+          assert len(txt.strip()) >= 10
           PY
