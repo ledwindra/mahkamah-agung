@@ -1,4 +1,4 @@
-name: Live decision PDF smoke test (temporary)
+name: Alternative official hosts and JDIH retrieval test
 
 on:
   push:
@@ -7,56 +7,54 @@ on:
   workflow_dispatch:
 
 jobs:
-  live-smoke:
+  source-probes:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install archival dependencies
+      - name: Install
         run: python -m pip install -r requirements-archive.txt
-      - name: Probe official decision and direct download endpoints
+      - name: Test official hosts, JDIH catalog links, direct document PDF
         run: |
           python - <<'PY'
-          import requests
-          urls = [
-              "https://putusan3.mahkamahagung.go.id/direktori/putusan/11f1acd8ace2d8248c03313233303033.html",
-              "https://putusan3.mahkamahagung.go.id/direktori/download_file/a3b899fc8ec3ded2e20eaba1fcf6cf7d/pdf/zaeba7d1706ef560823e313032353534",
+          import requests,io
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+          session=requests.Session()
+          session.headers['User-Agent']='CourtDecisionResearchArchive/0.1 (+public research)'
+          targets = [
+            'https://jdih.mahkamahagung.go.id/dokumen?jenis=putusan',
+            'https://jdih.mahkamahagung.go.id/dokumen-hukum/putusan/zaf0ef9726825740981f313631343531',
+            'https://jdih.mahkamahagung.go.id/download-file-satker/putusan',
+            'https://putusan.mahkamahagung.go.id/',
+            'https://putusan2.mahkamahagung.go.id/',
+            'https://putusan3.mahkamahagung.go.id/direktori',
+            'https://putusan3.mahkamahagung.go.id/putusan/2aeecc3d40d5001c975b313013013032',
+            'https://putusan3.mahkamahagung.go.id/search/index/pencarian/ajax/putusan',
           ]
-          for url in urls:
-              try:
-                  with requests.get(url, timeout=15, stream=True, allow_redirects=False) as response:
-                      first = next(response.iter_content(chunk_size=1024), b"")
-                      print("URL:", url)
-                      print("HTTP:", response.status_code, "Content-Type:", response.headers.get("Content-Type"))
-                      print("PDF signature:", b"%PDF-" in first[:1024])
-                      print("Redirect target:", response.headers.get("Location", "none"))
-              except Exception as exc:
-                  print("URL:", url, "ERROR:", type(exc).__name__, str(exc)[:400])
+          for url in targets:
+            print('--- URL',url,flush=True)
+            try:
+              with session.get(url,timeout=12,allow_redirects=False,stream=True) as r:
+                body=bytearray()
+                for chunk in r.iter_content(65536):
+                  body.extend(chunk)
+                  if len(body)>5_000_000: break
+                print('status',r.status_code,'ct',r.headers.get('Content-Type'),'bytes',len(body),'pdf',b'%PDF-' in body[:1024],flush=True)
+                if r.status_code==200 and b'%PDF-' in body[:1024]:
+                  try:
+                    reader=PdfReader(io.BytesIO(body))
+                    print('pdf pages',len(reader.pages),'page1 text chars',len(reader.pages[0].extract_text() or ''),flush=True)
+                  except Exception as exc:
+                    print('pdf parse issue',type(exc).__name__,str(exc)[:160],flush=True)
+                elif r.status_code==200 and '<html' in body[:2000].decode('utf-8','ignore').lower():
+                  s=BeautifulSoup(body,'html.parser')
+                  anchors=[(a.get_text(' ',strip=True)[:90],a.get('href','')[:180]) for a in s.select('a[href]')]
+                  pdfs=[a for a in anchors if ('pdf' in a[1].lower() or 'download' in a[1].lower())]
+                  print('links total',len(anchors),'pdf download links',pdfs[:5],flush=True)
+            except Exception as exc:
+              print('ERROR',type(exc).__name__,str(exc)[:350],flush=True)
           PY
-      - name: Exercise end-to-end decision download and text extraction
-        run: |
-          python -m rulings.archive crawl \
-            --url "https://putusan3.mahkamahagung.go.id/direktori/putusan/11f1acd8ace2d8248c03313233303033.html" \
-            --download --text --timeout 20 --retries 0 --output smoke-results
-          python -m rulings.archive stats --output smoke-results
-          python - <<'PY'
-          import sqlite3
-          from pathlib import Path
-          p=Path("smoke-results")
-          con=sqlite3.connect(p / "index.sqlite3")
-          row=con.execute("SELECT status,pdf_path,pdf_sha256,page_count,text_chars FROM decisions LIMIT 1").fetchone()
-          print("Archived result:", row)
-          assert row is not None and row[0] in ("text_extracted", "scanned_pdf")
-          assert (p / row[1]).is_file()
-          assert row[2] and len(row[2]) == 64
-          assert row[3] >= 1
-          PY
-      - name: Print final index status even if smoke test fails
-        if: always()
-        run: |
-          if [ -f smoke-results/index.sqlite3 ]; then
-            python -m rulings.archive stats --output smoke-results
-          fi
