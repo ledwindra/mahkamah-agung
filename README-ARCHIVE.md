@@ -8,7 +8,7 @@ This adds a second workflow to the historical Mahkamah Agung scraping repository
 
 Requires git and Python 3.10 or newer.
 
-    git clone --branch feature/decision-pdf-archive https://github.com/ledwindra/mahkamah-agung.git
+    git clone https://github.com/ledwindra/mahkamah-agung.git
     cd mahkamah-agung
     bash scripts/setup-archive.sh
 
@@ -26,7 +26,7 @@ If successful, inspect archive/index.sqlite3, archive/pdf/ and archive/text/. A 
 
 Requires git and Python 3.10+ (py launcher or python executable).
 
-    git clone --branch feature/decision-pdf-archive https://github.com/ledwindra/mahkamah-agung.git
+    git clone https://github.com/ledwindra/mahkamah-agung.git
     cd mahkamah-agung
     .\scripts\setup-archive.ps1
 
