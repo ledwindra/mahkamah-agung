@@ -255,7 +255,7 @@ def process(db: sqlite3.Connection, client: Client, url: str, root: Path,
         raise ValueError("Not a decision detail URL: " + url)
     prior = db.execute("SELECT * FROM decisions WHERE detail_url=?", (url,)).fetchone()
     if prior is not None and not force:
-        if prior["status"] in ("text_extracted", "scanned_pdf", "pdf_saved", "metadata_only", "no_pdf"):
+        if prior["status"] in ("text_extracted", "scanned_pdf", "pdf_saved", "no_pdf") or (prior["status"] == "metadata_only" and not download):
             if prior["status"] in ("text_extracted", "scanned_pdf", "pdf_saved") and text and prior["pdf_path"]:
                 pdf_file = root / prior["pdf_path"]
                 if pdf_file.is_file() and prior["status"] == "pdf_saved":
@@ -284,7 +284,7 @@ def process(db: sqlite3.Connection, client: Client, url: str, root: Path,
 
     pdf_file = Path("pdf") / (digest_for_url(url) + ".pdf")
     absolute_pdf = root / pdf_file
-    if force or not absolute_pdf.is_file() or not pdf_signature(absolute_pdf.read_bytes()[:1024]):
+    if force or not absolute_pdf.is_file() or not pdf_signature(absolute_pdf.open("rb").read(1024)):
         sha = save_pdf(client, pdf_url, absolute_pdf, max_bytes=max_bytes)
     else:
         sha = hashlib.sha256(absolute_pdf.read_bytes()).hexdigest()
@@ -339,7 +339,7 @@ def crawl(args) -> int:
             if args.max_cases and processed >= args.max_cases:
                 break
             try:
-                status = process(db, client, url, root, args.download,
+                status = process(db, client, url, root, (args.download or args.text),
                                  args.text, int(args.max_mb * 1024 * 1024), args.force)
             except AccessBlocked:
                 raise
