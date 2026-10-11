@@ -1,0 +1,62 @@
+name: Live decision PDF smoke test (temporary)
+
+on:
+  push:
+    branches:
+      - verify/live-pdf-smoke-20261010
+  workflow_dispatch:
+
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install archival dependencies
+        run: python -m pip install -r requirements-archive.txt
+      - name: Probe official decision and direct download endpoints
+        run: |
+          python - <<'PY'
+          import requests
+          urls = [
+              "https://putusan3.mahkamahagung.go.id/direktori/putusan/11f1acd8ace2d8248c03313233303033.html",
+              "https://putusan3.mahkamahagung.go.id/direktori/download_file/a3b899fc8ec3ded2e20eaba1fcf6cf7d/pdf/zaeba7d1706ef560823e313032353534",
+          ]
+          for url in urls:
+              try:
+                  with requests.get(url, timeout=15, stream=True, allow_redirects=False) as response:
+                      first = next(response.iter_content(chunk_size=1024), b"")
+                      print("URL:", url)
+                      print("HTTP:", response.status_code, "Content-Type:", response.headers.get("Content-Type"))
+                      print("PDF signature:", b"%PDF-" in first[:1024])
+                      print("Redirect target:", response.headers.get("Location", "none"))
+              except Exception as exc:
+                  print("URL:", url, "ERROR:", type(exc).__name__, str(exc)[:400])
+          PY
+      - name: Exercise end-to-end decision download and text extraction
+        run: |
+          python -m rulings.archive crawl \
+            --url "https://putusan3.mahkamahagung.go.id/direktori/putusan/11f1acd8ace2d8248c03313233303033.html" \
+            --download --text --timeout 20 --retries 0 --output smoke-results
+          python -m rulings.archive stats --output smoke-results
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+          p=Path("smoke-results")
+          con=sqlite3.connect(p / "index.sqlite3")
+          row=con.execute("SELECT status,pdf_path,pdf_sha256,page_count,text_chars FROM decisions LIMIT 1").fetchone()
+          print("Archived result:", row)
+          assert row is not None and row[0] in ("text_extracted", "scanned_pdf")
+          assert (p / row[1]).is_file()
+          assert row[2] and len(row[2]) == 64
+          assert row[3] >= 1
+          PY
+      - name: Print final index status even if smoke test fails
+        if: always()
+        run: |
+          if [ -f smoke-results/index.sqlite3 ]; then
+            python -m rulings.archive stats --output smoke-results
+          fi
